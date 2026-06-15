@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: beatbox-backend
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: npm install && pip3 install yt-dlp
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
