@@ -4,9 +4,6 @@ services:
     env: node
     region: singapore
     plan: free
-    buildCommand: npm install && pip3 install yt-dlp
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
+    buildCommand: npm install
+    startCommand: node server.js
     healthCheckPath: /
